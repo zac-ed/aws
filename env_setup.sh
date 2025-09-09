@@ -28,3 +28,12 @@ pip install boto3 botocore ansible
 deactivate
 	## ^ Stupid system breakages, ^ ##
 	## I've totally never done that ##
+
+
+files=("setup_profiles.md" "tags.json" "create_budget.sh" "enable_guardduty.sh" "enable_config.sh")
+
+for file in "{files[@]}"; do 
+	touch $file
+done
+
+aws configure --profile dev
